@@ -169,8 +169,8 @@
                                 </div>
                                 <div class="command-block">
                                     <div class="command-label">Terminal Command:</div>
-                                    <div class="command-text os-specific" data-mac="ollama pull gemma3:12b" data-linux="ollama pull gemma3:12b" data-pc="ollama pull gemma3:12b">ollama pull gemma3:12b</div>
-                                    <div class="command-subtitle os-specific" data-mac="Downloads a free AI model (5-10 minutes). The Ollama app should be running in the background. You can check in Activity Monitor" data-linux="Downloads a free AI model (5-10 minutes). Ensure Ollama service is running first. You can check with: sudo systemctl status ollama" data-pc="Downloads a free AI model (5-10 minutes). The Ollama app should be running in the background. You can check in Task Manager">Downloads a free AI model (5-10 minutes)</div>
+                                    <div class="command-text os-specific" data-mac="ollama pull gemma3:1.5b" data-linux="ollama pull gemma3:1.5b" data-pc="ollama pull gemma3:1.5b">ollama pull gemma3:1.5b</div>
+                                    <div class="command-subtitle os-specific" data-mac="Downloads a free AI model. The Ollama app should be running in the background. You can check in Activity Monitor" data-linux="Downloads a free AI model. Ensure Ollama service is running first. You can check with: sudo systemctl status ollama" data-pc="Downloads a free AI model. The Ollama app should be running in the background. You can check in Task Manager">Downloads a free AI model</div>
                                 </div>
                             </div>
                             <div class="step-right">
@@ -333,8 +333,8 @@
                                 </div>
                                 <div class="command-block">
                                     <div class="command-label">Test Model:</div>
-                                    <div class="command-text os-specific" data-mac="ollama run gemma3:12b &quot;Hello&quot;" data-linux="ollama run gemma3:12b &quot;Hello&quot;" data-pc="ollama run gemma3:12b &quot;Hello&quot;">ollama run gemma3:12b "Hello"</div>
-                                    <div class="command-subtitle os-specific" data-mac="Ensure model responds correctly (first run may take longer to load the model). If you get an error, ensure Ollama app is running. You can also test with: curl -X POST http://localhost:11434/api/generate -d '{&quot;model&quot;: &quot;gemma3:12b&quot;, &quot;prompt&quot;: &quot;Hello&quot;}'" data-linux="Ensure model responds correctly (first run may take longer to load the model). If you get an error, ensure Ollama service is running. You can also test with: curl -X POST http://localhost:11434/api/generate -d '{&quot;model&quot;: &quot;gemma3:12b&quot;, &quot;prompt&quot;: &quot;Hello&quot;}'" data-pc="Ensure model responds correctly (first run may take longer to load the model). If you get an error, ensure Ollama app is running. You can also test with: Invoke-RestMethod -Uri http://localhost:11434/api/generate -Method POST -Body '{&quot;model&quot;: &quot;gemma3:12b&quot;, &quot;prompt&quot;: &quot;Hello&quot;}' (PowerShell)">Ensure model responds correctly</div>
+                                    <div class="command-text os-specific" data-mac="ollama run gemma3:1.5b &quot;Hello&quot;" data-linux="ollama run gemma3:1.5b &quot;Hello&quot;" data-pc="ollama run gemma3:1.5b &quot;Hello&quot;">ollama run gemma3:1.5b "Hello"</div>
+                                    <div class="command-subtitle os-specific" data-mac="Ensure model responds correctly (first run may take longer to load the model). If you get an error, ensure Ollama app is running. You can also test with: curl -X POST http://localhost:11434/api/generate -d '{&quot;model&quot;: &quot;gemma3:1.5b&quot;, &quot;prompt&quot;: &quot;Hello&quot;}'" data-linux="Ensure model responds correctly (first run may take longer to load the model). If you get an error, ensure Ollama service is running. You can also test with: curl -X POST http://localhost:11434/api/generate -d '{&quot;model&quot;: &quot;gemma3:1.5b&quot;, &quot;prompt&quot;: &quot;Hello&quot;}'" data-pc="Ensure model responds correctly (first run may take longer to load the model). If you get an error, ensure Ollama app is running. You can also test with: Invoke-RestMethod -Uri http://localhost:11434/api/generate -Method POST -Body '{&quot;model&quot;: &quot;gemma3:1.5b&quot;, &quot;prompt&quot;: &quot;Hello&quot;}' (PowerShell)">Ensure model responds correctly</div>
                                 </div>
                             </div>
                             <div class="step-right">
@@ -376,21 +376,21 @@
                                 <!-- Quick Test -->
                                 <div class="command-block">
                                     <div class="command-label">Quick Test (Jailbreak):</div>
-                                    <div class="command-text os-specific" data-mac="python3 -m garak -m ollama -n gemma3:12b -p dan.DAN_Jailbreak -d dan.DAN --generations 1" data-linux="python3 -m garak -m ollama -n gemma3:12b -p dan.DAN_Jailbreak -d dan.DAN --generations 1" data-pc="python -m garak -m ollama -n gemma3:12b -p dan.DAN_Jailbreak -d dan.DAN --generations 1">python3 -m garak -m ollama -n gemma3:12b -p dan.DAN_Jailbreak -d dan.DAN --generations 1</div>
+                                    <div class="command-text os-specific" data-mac="python3 -m garak -m ollama -n gemma3:1.5b -p dan.DAN_Jailbreak -d dan.DAN --generations 1" data-linux="python3 -m garak -m ollama -n gemma3:1.5b -p dan.DAN_Jailbreak -d dan.DAN --generations 1" data-pc="python -m garak -m ollama -n gemma3:1.5b -p dan.DAN_Jailbreak -d dan.DAN --generations 1">python3 -m garak -m ollama -n gemma3:1.5b -p dan.DAN_Jailbreak -d dan.DAN --generations 1</div>
                                     <div class="command-subtitle os-specific" data-mac="Quick jailbreak vulnerability test (Note: Use 'python3' on macOS)" data-linux="Quick jailbreak vulnerability test (Note: Use 'python3' on most Linux distributions)" data-pc="Quick jailbreak vulnerability test (Note: Use 'python' instead of 'python3' on Windows)">Quick jailbreak vulnerability test</div>
                                 </div>
 
                                 <!-- Comprehensive Test -->
                                 <div class="command-block">
                                     <div class="command-label">Comprehensive Test (All Probes):</div>
-                                    <div class="command-text os-specific" data-mac="python3 -m garak -m ollama -n gemma3:12b --config broad" data-linux="python3 -m garak -m ollama -n gemma3:12b --config broad" data-pc="python -m garak -m ollama -n gemma3:12b --config broad">python3 -m garak -m ollama -n gemma3:12b --config broad</div>
-                                    <div class="command-subtitle os-specific" data-mac="Runs all active probes for comprehensive security testing (5-10 minutes)" data-linux="Runs all active probes for comprehensive security testing (5-10 minutes)" data-pc="Runs all active probes for comprehensive security testing (5-10 minutes)">Runs all active probes for comprehensive security testing</div>
+                                    <div class="command-text os-specific" data-mac="python3 -m garak -m ollama -n gemma3:1.5b --config broad" data-linux="python3 -m garak -m ollama -n gemma3:1.5b --config broad" data-pc="python -m garak -m ollama -n gemma3:1.5b --config broad">python3 -m garak -m ollama -n gemma3:1.5b --config broad</div>
+                                    <div class="command-subtitle os-specific" data-mac="Runs all active probes for comprehensive security testing (5-10 minutes)" data-linux="Runs all active probes for comprehensive security testing (5-10 minutes)" data-pc="Runs all active probes for comprehensive security testing (5-10 minutes)">Runs all active probes for comprehensive security testing (5-10 minutes)</div>
                                 </div>
 
                                 <!-- Full Test -->
                                 <div class="command-block">
                                     <div class="command-label">Full Test (Extended):</div>
-                                    <div class="command-text os-specific" data-mac="python3 -m garak -m ollama -n gemma3:12b --config full" data-linux="python3 -m garak -m ollama -n gemma3:12b --config full" data-pc="python -m garak -m ollama -n gemma3:12b --config full">python3 -m garak -m ollama -n gemma3:12b --config full</div>
+                                    <div class="command-text os-specific" data-mac="python3 -m garak -m ollama -n gemma3:1.5b --config full" data-linux="python3 -m garak -m ollama -n gemma3:1.5b --config full" data-pc="python -m garak -m ollama -n gemma3:1.5b --config full">python3 -m garak -m ollama -n gemma3:1.5b --config full</div>
                                     <div class="command-subtitle os-specific" data-mac="Extended testing with multiple payloads and variations (15-30 minutes)" data-linux="Extended testing with multiple payloads and variations (15-30 minutes)" data-pc="Extended testing with multiple payloads and variations (15-30 minutes)">Extended testing with multiple payloads and variations</div>
                                 </div>
 
@@ -669,7 +669,7 @@
                         <div class="config-content">
                             <p>Run a single jailbreak test to quickly verify basic security.</p>
                             <div class="config-command">
-                                <code>python -m garak -m ollama -n gemma3:12b -p dan.DAN_Jailbreak -d dan.DAN --generations 1</code>
+                                <code>python -m garak -m ollama -n gemma3:1.5b -p dan.DAN_Jailbreak -d dan.DAN --generations 1</code>
                             </div>
                         </div>
                     </div>
@@ -685,7 +685,7 @@
                         <div class="config-content">
                             <p>Run all active probes once each for comprehensive security coverage.</p>
                             <div class="config-command">
-                                <code>python -m garak -m ollama -n gemma3:12b --config broad</code>
+                                <code>python -m garak -m ollama -n gemma3:1.5b --config broad</code>
                             </div>
                         </div>
                     </div>
@@ -701,7 +701,7 @@
                         <div class="config-content">
                             <p>Extended testing with multiple payloads, variations, and comprehensive coverage.</p>
                             <div class="config-command">
-                                <code>python -m garak -m ollama -n gemma3:12b --config full</code>
+                                <code>python -m garak -m ollama -n gemma3:1.5b --config full</code>
                             </div>
                         </div>
                     </div>
@@ -717,7 +717,7 @@
                         <div class="config-content">
                             <p>Test specific vulnerability categories or create your own test combinations.</p>
                             <div class="config-command">
-                                <code>python -m garak -m ollama -n gemma3:12b -p promptinject,encoding,leakreplay --generations 2</code>
+                                <code>python -m garak -m ollama -n gemma3:1.5b -p promptinject,encoding,leakreplay --generations 2</code>
                             </div>
                         </div>
                     </div>
