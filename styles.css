@@ -435,6 +435,81 @@ body {
     outline-offset: 2px;
 }
 
+/* Path Icons */
+.path-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 12px;
+    margin-right: 0.75rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.path-icon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    opacity: 0.1;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.api-icon {
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+.api-icon::before {
+    background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+}
+
+.api-icon i {
+    color: white;
+    font-size: 1.1rem;
+    z-index: 1;
+    position: relative;
+}
+
+.local-icon {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+}
+
+.local-icon::before {
+    background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
+}
+
+.local-icon i {
+    color: white;
+    font-size: 1.1rem;
+    z-index: 1;
+    position: relative;
+}
+
+.path-option:hover .path-icon {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.path-option:hover .api-icon {
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+}
+
+.path-option:hover .local-icon {
+    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+}
+
+.path-option:hover .path-icon::before {
+    opacity: 0.2;
+}
+
 /* Cards - Linear-style */
 .card {
     background: var(--bg-tertiary);
